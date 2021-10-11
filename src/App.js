@@ -7,6 +7,7 @@ import Login from "./Components/Login/Login";
 import Header from "./Components/Header/Header";
 import AuthProvider from "./context/AuthProvider";
 import Shipping from "./Components/Shipping/Shipping";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -28,9 +29,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/shipping">
+            <PrivateRoute path="/shipping">
               <Shipping> </Shipping>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>
